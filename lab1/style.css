@@ -1,0 +1,5 @@
+.add-todo-input:focus,
+.edit-todo-input:focus {
+  border: none !important;
+  box-shadow: none !important;
+}

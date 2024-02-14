@@ -1,0 +1,42 @@
+<section class="row">
+  <div class="col-12">
+    <header class="row">
+      <div class="col">
+        <h1 class="text-center mt-4 text-white-50">To Do List</h1>
+      </div>
+    </header>
+    <section class="row justify-content-center mb-5">
+      <label for="taskInput" class="fs-2 form-label text-center text-white-50"
+        >Add Task</label
+      >
+      <div class="col-2">
+        <input
+          type="text"
+          id="taskInput"
+          class="form-control mb-3 text-center"
+          placeholder="Add a task"
+        />
+      </div>
+      <div class="d-flex justify-content-center">
+        <button onclick="addList()" class="btn btn-lg btn-success col-2">
+          Add
+        </button>
+      </div>
+    </section>
+    <section class="container" id="listContainer">
+      <div id="listItem" class="row justify-content-center mb-3">
+        <div class="col-4">
+          <input type="checkbox" class="me-3" />
+        </div>
+        <div class="col-4">
+          <p class="text-info fs-3 mb-0">Feed Cat</p>
+        </div>
+        <div class="col-4">
+          <button class="btn btn-danger ms-4">
+            <img src="../img/trashIcon.png" alt="trashIcon" height="25rem" />
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
