@@ -27,7 +27,7 @@ example.) Again, be thoughtful and deliberate about your design. (1 pt)
 Allow users to define subtasks. Subtasks should be able to be checked off/deleted
 individually OR checked off /deleted together with the super-task. (1 pt)
 
-###V. Grading Details:
+### V. Grading Details:
 The following are a prerequisite to my grading your assignment. (If these conditions are not met,
 it’s an automatic zero):
 ● Use of GitHub and GitHub pages
