@@ -14,37 +14,126 @@
   </head>
   <body class="bg-secondary">
     <main class="container m-5 p-3 mx-auto rounded bg-light shadow">
-      <section class="row justify-content-center">
+      <section class="row justify-content-center mt-3">
         <div class="col col-11 mx-auto">
           <div class="row bg-white rounded shadow-sm p-2">
             <div class="col">
               <input
-                class="form-control form-control-lg border-0 add-todo-input bg-transparent rounded border outline"
+                class="form-control form-control-lg border-0 add-todo-input bg-transparent rounded"
                 type="text"
                 placeholder="Add a Task"
+                id="taskInput"
               />
             </div>
             <div class="col-auto px-0 mx-0">
-              <button type="button" class="btn btn-lg btn-primary">Add</button>
+              <button
+                type="button"
+                class="btn btn-lg btn-primary"
+                onclick="addTask()"
+              >
+                Add
+              </button>
             </div>
           </div>
         </div>
       </section>
-      <section class="row">
-        <div class="col-3 m-5">
-          <div class="card">
-            <p class="fs-4 ps-4">Clean Cat</p>
-          </div>
+      <section class="row justify-content-center">
+        <div class="col-6 mt-3">
+          <h3
+            class="text-center text-secondary border-bottom border-dark border-2 pb-3"
+          >
+            Tasks
+          </h3>
+          <section class="row mt-3">
+            <div class="col">
+              <ul id="taskList" class="list-unstyled">
+                <li class="row d-flex mb-3">
+                  <input type="checkbox" class="col-1 checkbox mt-2 ms-4" />
+                  <label class="fs-3 col-3 text-center">Pay Bills</label
+                  ><input type="text" class="d-none" />
+                  <div class="col-3">
+                    <button id="edit" class="btn btn-outline-success me-3">
+                      Edit</button
+                    ><button id="delete" class="btn btn-outline-danger">
+                      Delete
+                    </button>
+                  </div>
+                  <div class="col-5 d-flex justify-content-evenly">
+                    <label class="fs-3">Due: </label>
+                    <input
+                      type="date"
+                      class="text-center fs-5 border-0 rounded bg-light"
+                    />
+                  </div>
+                </li>
+                <li class="row d-flex mb-3">
+                  <input
+                    type="checkbox"
+                    class="col-1 checkbox mt-2 ms-4"
+                    onclick="completeTask(this)"
+                  />
+                  <label class="fs-3 col-3 text-center">Test</label
+                  ><input type="text" class="d-none" />
+                  <div class="col-3">
+                    <button id="edit" class="btn btn-outline-success me-3">
+                      Edit</button
+                    ><button
+                      id="delete"
+                      class="btn btn-outline-danger"
+                      onclick="deleteItem(this)"
+                    >
+                      Delete
+                    </button>
+                  </div>
+                  <div class="col-5 d-flex justify-content-evenly">
+                    <label class="fs-3">Due: </label>
+                    <input
+                      type="date"
+                      class="text-center fs-5 border-0 rounded bg-light"
+                    />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
         </div>
-        <div class="col-3 m-5">
-          <div class="card">
-            <p class="fs-4 ps-4">Clean Cat</p>
-          </div>
-        </div>
-        <div class="col-3 m-5">
-          <div class="card">
-            <p class="fs-4 ps-4">Clean Cat</p>
-          </div>
+        <div class="col-6 mt-3">
+          <h3
+            class="text-center text-success border-bottom border-dark border-2 pb-3"
+          >
+            Completed
+          </h3>
+          <section class="row mt-3">
+            <div class="col">
+              <ul id="completedTasks" class="list-unstyled">
+                <li
+                  class="row d-flex mb-3 text-decoration-line-through text-secondary"
+                >
+                  <input
+                    type="checkbox"
+                    class="col-1 checkbox mt-2 ms-4"
+                    checked
+                  />
+                  <label class="fs-3 col-3 text-center">Pay Bills</label
+                  ><input type="text" class="d-none" />
+                  <div class="col-3">
+                    <button id="edit" class="btn btn-outline-success me-3">
+                      Edit</button
+                    ><button id="delete" class="btn btn-outline-danger">
+                      Delete
+                    </button>
+                  </div>
+                  <div class="col-5 d-flex justify-content-evenly">
+                    <label class="fs-3">Due: </label>
+                    <input
+                      type="date"
+                      class="text-center fs-5 border-0 rounded bg-light"
+                    />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
         </div>
       </section>
     </main>
