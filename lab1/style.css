@@ -1,5 +1,4 @@
-.add-todo-input:focus,
-.edit-todo-input:focus {
-  border: none !important;
-  box-shadow: none !important;
+.checkbox {
+  width: 30px;
+  height: 30px;
 }
